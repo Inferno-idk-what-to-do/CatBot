@@ -6,7 +6,7 @@
       "npm": "*"
     },
     "scripts": {
-      "start": "npm index.js"
+      "start": "node index.js"
     },
     "main": "index.js",
     "author": "Inferno._.",
