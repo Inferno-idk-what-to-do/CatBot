@@ -1,5 +1,6 @@
-const { Client, Intents } = require("discord.js");
-const { MessageEmbed } = require('discord.js');
+const { Client, Intents, MessageEmbed } = require("discord.js");
+const Token = require('./token.js').varExport;
+
 // Since discord.js exports an object by default, we can destructure it. Read up more here https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
@@ -31,5 +32,6 @@ client.on("messageCreate", (message) => {
     }
   }
 });
- 
-client.login("OTM2NDQzMzA4MzY3MDQ0NjEw.YfNQyg.E28jxxJiuL6gl1xCSXA5pHDhPzg");
+
+
+client.login(Token);
