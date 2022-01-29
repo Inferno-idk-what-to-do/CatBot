@@ -1,5 +1,5 @@
 const { Client, Intents, MessageEmbed } = require("discord.js");
-const Token = require('./token.js').varExport;
+require('dotenv').config();
 
 // Since discord.js exports an object by default, we can destructure it. Read up more here https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 const client = new Client({
@@ -34,4 +34,4 @@ client.on("messageCreate", (message) => {
 });
 
 
-client.login(Token);
+client.login(process.env.DISCORDBOTTOKEN);
