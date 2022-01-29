@@ -11,7 +11,7 @@
     "author": "Inferno._.",
     "license": "unlicensed",
     "dependencies": {
-      "discord.js": "11.0.0",
+      "discord.js": "13.6.0",
       "moment": "2.20.1",
       "dotenv": "14.3.2"
     }
