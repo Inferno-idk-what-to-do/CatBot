@@ -15,7 +15,7 @@ client.on("ready", () => {
 });
  
 client.on("messageCreate", (message) => {
-  if(message.guild.id == "779787578039074857" || message.channel.id == "779787578039074861" || message.channel.id == "933826202039353474")
+  if(message.guild.id == "779787578039074857" || message.channel.id == "909670105263243324" || message.channel.id == "933826202039353474")
   {
     if (message.content.toLowerCase().startsWith("gibcat -u")) {
 
