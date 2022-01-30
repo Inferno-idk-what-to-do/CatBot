@@ -55,7 +55,7 @@ client.on("messageCreate", (message) => {
             url+=strs[i]+"%20"
           }
 
-            cat = await axios.get(url, {responseType: 'arraybuffer'}).catch((err) => {console.log(err)});
+            cat = await axios.get(url, {responseType: 'arraybuffer'}).catch((err) => {console.log(err); message.channel.send("bozo moment")});
         }
 
         try
