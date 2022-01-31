@@ -15,6 +15,7 @@ client.on("ready", () => {
 });
  
 client.on("messageCreate", (message) => {
+  // if message is in test server, featherteeth #commands or wolfy #bot-commands
   if(message.guild.id == "779787578039074857" || message.channel.id == "909670105263243324" || message.channel.id == "933826202039353474")
   {
     if (message.content.toLowerCase().startsWith("gibcat -u")) {
@@ -34,7 +35,7 @@ client.on("messageCreate", (message) => {
       img += "?" + Math.random();
 
       const embed = new MessageEmbed()
-      .setTitle("have a cat")
+      .setTitle("have a cat, " + message.author.name)
       .setImage(img);
 
       message.channel.send({ embeds: [embed] });
@@ -63,7 +64,7 @@ client.on("messageCreate", (message) => {
         const attachment = new MessageAttachment(cat.data, 'cat.jpg');
 
         const embed = new MessageEmbed()
-        .setTitle("have a cat")
+        .setTitle("have a cat, " + (message.member.nickname ?? message.author.username))
         .setImage("attachment://cat.jpg");
 
         message.channel.send({ embeds: [embed], files: [attachment] });
