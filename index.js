@@ -80,7 +80,7 @@ client.on("messageCreate", (message) => {
     {
       message.channel.send("fuck you <@" + message.author.id + "> cats are better, i mean my name is literally " + 
                             "catbot i have no idea what you were expecting " + 
-                            (message.author.id != 937568619234209822 ? "||emily that goes for you too bitch||" : ""));
+                            (message.author.id != 663587651424747520 ? "||emily that goes for you too bitch||" : ""));
     }
   }
 });
