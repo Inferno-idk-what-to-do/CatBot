@@ -79,7 +79,8 @@ client.on("messageCreate", (message) => {
     else if (message.content.toLowerCase().startsWith("gibdog"))
     {
       message.channel.send("fuck you <@" + message.author.id + "> cats are better, i mean my name is literally " + 
-                            "catbot i have no idea what you were expecting ||emily that goes for you too bitch||");
+                            "catbot i have no idea what you were expecting " + 
+                            (message.author.id != 937568619234209822 ? "||emily that goes for you too bitch||" : ""));
     }
   }
 });
