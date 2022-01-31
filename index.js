@@ -76,6 +76,11 @@ client.on("messageCreate", (message) => {
 
       sameCat();
     }
+    else if (message.content.toLowerCase().startsWith("gibdog"))
+    {
+      message.channel.send("fuck you <@" + message.author.id + "> cats are better, i mean my name is literally " + 
+                            "catbot i have no idea what you were expecting ||emily that goes for you too bitch||");
+    }
   }
 });
 
