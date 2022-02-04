@@ -1,4 +1,4 @@
-const { Client, Intents, MessageEmbed, DiscordAPIError, MessageAttachment } = require("discord.js");
+const { Client, Intents, MessageEmbed, DiscordAPIError, MessageAttachment, MessageSelectMenu } = require("discord.js");
 const axios = require('axios');
 
 const CAT_API_URL = "https://api.thecatapi.com/"
@@ -13,14 +13,26 @@ const client = new Client({
 client.on("ready", () => {
   console.log("cat");
 });
+
+let acceptMessages = true;
  
 client.on("messageCreate", (message) => {
-  // if message is in test server, featherteeth #commands, wolfy #bot-commands, or walter
-  if(message.guild.id == "779787578039074857" || message.channel.id == "909670105263243324" || 
-    message.channel.id == "933826202039353474" || message.guild.id == "754765312187957378")
-  {
-    if (message.content.toLowerCase().startsWith("gibcat -u")) {
 
+  if(message.content.toLowerCase().startsWith("catbot stop") && message.author.id == "517699048489091083" && acceptMessages)
+  {
+    acceptMessages = false;
+  }
+  else if(MessageSelectMenu.content.toLowerCase().startsWith("catbot resume") && message.author.id == "517699048489091083" && !acceptMessages)
+  {
+    acceptMessages = true;
+  }
+
+  // if message is in test server, featherteeth #commands, wolfy #bot-commands, or walter
+  if((message.guild.id == "779787578039074857" || message.channel.id == "909670105263243324" || 
+    message.channel.id == "933826202039353474" || message.guild.id == "754765312187957378") &&
+    acceptMessages)
+  {
+    else if (message.content.toLowerCase().startsWith("gibcat -u")) {
       var img = "https://cataas.com/cat"
 
       if(message.content.indexOf(" ") != -1)
