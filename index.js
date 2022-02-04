@@ -32,7 +32,7 @@ client.on("messageCreate", (message) => {
     message.channel.id == "933826202039353474" || message.guild.id == "754765312187957378") &&
     acceptMessages)
   {
-    else if (message.content.toLowerCase().startsWith("gibcat -u")) {
+    if (message.content.toLowerCase().startsWith("gibcat -u")) {
       var img = "https://cataas.com/cat"
 
       if(message.content.indexOf(" ") != -1)
