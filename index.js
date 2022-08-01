@@ -37,7 +37,7 @@ client.on("messageCreate", (message) => {
 
   // if message is in test server, featherteeth #commands, wolfy #bot-commands, or wav #bot-commands
   if(message.guild.id == "779787578039074857" || message.channel.id == "909670105263243324" || 
-    message.channel.id == "933826202039353474" || message.guild.id == "1003166195643596811")
+    message.channel.id == "933826202039353474" || message.channel.id == "1003166195643596811")
   {
     // status that works for anyone
     if(message.content.toLowerCase().startsWith("catbot status"))
